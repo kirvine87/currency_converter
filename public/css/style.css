@@ -1,0 +1,45 @@
+html {
+  background-image: url("../image/back.jpg");
+  background-size: cover;
+
+}
+
+
+#app {
+  border: 5px solid white;
+  margin: 0 auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: 300px;
+  width: 50%;
+  opacity: 0.8;
+  font-family: fantasy;
+}
+
+img {
+  position: absolute;
+  display: flex;
+  animation: animate-plane 1s linear infinite;
+}
+
+@keyframes animate-plane
+{
+  0%
+  {
+    transform: translate(5px, 5px);
+  }
+  50%
+  {
+    transform: translate(-5px, -5px);
+  }
+  100%
+  {
+    transform: translate(5px, 5px);
+  }
+}
+
+h6 {
+  position: absolute;
+  bottom: 30px;
+}

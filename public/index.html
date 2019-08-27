@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bundle.js"></script>
+  <title>Currency Converter</title>
+</head>
+<body>
+  <div id="app" >
+    <h1>Convert Your Money</h1>
+    <hr>
+    <br>
+    <br>
+
+    <div id="conversion" >
+      <label for="conversion">Convert From:</label>
+      <select id="conversion" v-model="firstCurrency">
+        <option value="1">EUR</option>
+        <option v-for="(currency, name) in currencies" :value="currency">{{name}}</option>
+      </select>
+
+      <label for="conversion">Amount:</label>
+      <input v-model="userAmount" type="number" min="1"> Convert To:
+      <select id="conversion" v-model="secondCurrency">
+        <option value="1">EUR</option>
+        <option v-for="(currency, name) in currencies" :value="currency">{{name}}</option>
+      </select>
+    </div>
+
+    <div id="converted" v-if="secondCurrency">
+      <h2>Amount:</h2>
+      <h3>{{convert | round}}</h3>
+    </div>
+
+
+  </div class="plane">
+  <img src="./image/airplane.png" >
+  <div>
+
+  </div>
+<h6 >Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></h6>
+
+</body>
+</html>
